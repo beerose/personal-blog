@@ -1,44 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `Novela by Narative`,
-    name: `Narative`,
-    siteUrl: `https://novela.narative.co`,
+    title: `Aleksandra Sikora — personal blog`,
+    name: `blog`,
+    siteUrl: `https://aleksandrasays.com`,
     description: `This is my description that will be used in the meta tags and important for search results`,
     hero: {
-      heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+      heading: `About life. With a bit of sarcasm and a pinch of harshness.`,
       maxWidth: 652,
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/aleksandrasays`,
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
+        url: `https://github.com/beerose`,
       },
       {
         name: `instagram`,
-        url: `https://instagram.com/narative.co`,
-      },
-      {
-        name: `linkedin`,
-        url: `https://www.linkedin.com/company/narative/`,
-      },
-      {
-        name: `dribbble`,
-        url: `https://dribbble.com/narativestudio`,
+        url: `https://instagram.com/poczekajnamnie`,
       },
     ],
   },
   plugins: [
     {
-      resolve: "@narative/gatsby-theme-novela",
+      resolve: '@narative/gatsby-theme-novela',
       options: {
-        contentPosts: "content/posts",
-        contentAuthors: "content/authors",
-        basePath: "/",
-        authorsPage: true,
+        contentPosts: 'content/posts',
+        contentAuthors: 'content/authors',
+        basePath: '/',
+        authorsPage: false,
         sources: {
           local: true,
           // contentful: true,
@@ -60,6 +52,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
+        backend: {
+          repo: 'https://github.com/beerose/personal-blog',
+        },
       },
     },
   ],
