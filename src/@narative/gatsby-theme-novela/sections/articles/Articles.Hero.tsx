@@ -48,6 +48,9 @@ const ArticlesHero: React.FC<IAuthor> = ({ authors }) => {
     <Section relative id="Articles__Hero">
       <HeadingContainer style={{ maxWidth: `${hero.maxWidth}px` }}>
         <HeroHeading dangerouslySetInnerHTML={{ __html: hero.heading }} />
+        <Desc color="inherit">
+          With a bit of sarcasm and a pinch of harshness
+        </Desc>
       </HeadingContainer>
       <SubheadingContainer>
         <Bio author={featuredAuthor} />
@@ -131,6 +134,27 @@ const HeroHeading = styled.h1`
 
   ${mediaqueries.phablet`
     font-size: 32px;
+  `}
+`;
+
+const Desc = styled.h2`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.15;
+  padding-top: 20px;
+  color: ${(p) => p.theme.colors.primary};
+
+  a {
+    color: ${(p) => p.theme.colors.accent};
+  }
+
+  ${mediaqueries.desktop`
+    font-size: 16px
+  `}
+
+  ${mediaqueries.phablet`
+    font-size: 14px;
   `}
 `;
 
